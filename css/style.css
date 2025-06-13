@@ -1,5 +1,160 @@
-@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
 
-* {
-	
+header {
+  background-color: #123456;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid #ccc;
+}
+
+header.hovering {
+  background-color: white;
+  color: black;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 18px;
+  white-space: nowrap;
+  color: white;
+  transition: color 0.3s;
+}
+
+header.hovering .logo {
+  color: black;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-menu li {
+  padding: 12px 10px;
+  color: white;
+  transition: color 0.2s;
+}
+
+header.hovering .main-menu li {
+  color: black;
+}
+
+header.hovering .main-menu li.active {
+  color: #c8102e !important;
+}
+
+.header-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.header-links span {
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+header.hovering .header-links span {
+  color: black;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background: white;
+  color: black;
+  padding: 30px 50x;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+header.hovering .mega-menu,
+.mega-menu:hover {
+  display: flex;
+}
+
+.submenu-column {
+  min-width: 180px;
+  margin-right: 0;
+  background: #f8f8f8;
+  padding: 30px;
+  transition: background 0.3s;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.submenu-column.active {
+  background: white;
+}
+
+.submenu-column h4 {
+  border-bottom: 1px solid #999;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  transition: color 0.2s;
+  color: black;
+}
+
+.submenu-column.active h4 {
+  color: #c8102e;
+}
+
+.submenu-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu-column ul li {
+  margin: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: black;
+  transition: color 0.2s;
+  padding: 6px 12px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.submenu-column ul li.wrap {
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.submenu-column ul li:hover {
+  background: #c8102e;
+  color: white;
+}
+
+.submenu-column ul li:hover::after {
+  content: "•";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
