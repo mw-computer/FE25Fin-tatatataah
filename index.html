@@ -1,95 +1,190 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>목원대학교 컴퓨터공학과</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
   <script src="./js/main.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <div class="header-container">
-      <div class="logo"><strong>목원대학교</strong> 컴퓨터공학과</div>
-      <ul class="main-menu">
-        <li data-index="1">학과안내</li>
-        <li data-index="2">교수소개</li>
-        <li data-index="3">학사안내</li>
-        <li data-index="4">특성화사업</li>
-        <li data-index="5">학생활동</li>
-        <li data-index="6">커뮤니티</li>
-      </ul>
-      <div class="header-links">
-        <span>로그인</span>
-        <span>교내사이트</span>
-        <span>목원뷰</span>
+  <div class="visual-wrapper">
+    <header>
+      <div class="header-container">
+        <div class="logo"><strong>목원대학교</strong> 컴퓨터공학과</div>
+        <ul class="main-menu">
+          <li data-index="1">학과안내</li>
+          <li data-index="2">교수소개</li>
+          <li data-index="3">학사안내</li>
+          <li data-index="4">특성화사업</li>
+          <li data-index="5">학생활동</li>
+          <li data-index="6">커뮤니티</li>
+        </ul>
+        <div class="header-links">
+          <span>로그인</span>
+          <span>교내사이트</span>
+          <span>목원뷰</span>
+        </div>
+      </div>
+
+      <div class="mega-menu">
+        <div class="mega-menu-inner">
+          <div class="submenu-column" data-index="1">
+            <h4>학과안내</h4>
+            <ul>
+              <li><a href="#">학과소개</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">취업과진로</a></li>
+              <li><a href="#">특성화전략</a></li>
+              <li><a href="#">학과시설</a></li>
+              <li><a href="#">위치 및 연락처</a></li>
+            </ul>
+          </div>
+          <div class="submenu-column" data-index="2">
+            <h4>교수소개</h4>
+            <ul>
+              <li><a href="#">컴퓨터공학과</a></li>
+            </ul>
+          </div>
+          <div class="submenu-column" data-index="3">
+            <h4>학사안내</h4>
+            <ul>
+              <li><a href="#">교과과정</a></li>
+              <li><a href="#">교과목소개</a></li>
+              <li><a href="#">졸업요구조건</a></li>
+              <li><a href="#">학사일정</a></li>
+              <li><a href="#">직무기술서</a></li>
+            </ul>
+          </div>
+          <div class="submenu-column" data-index="4">
+            <h4>특성화사업</h4>
+            <ul>
+              <li><a href="#">SW인재양성사업</a></li>
+              <li>
+                <a href="#" style="display: inline-block; line-height: 1.5; padding: 6px 12px;">
+                  SW전문인재양성사업<br>교육과정
+                </a>
+              </li>
+              <li><a href="#">IPP사업 안내</a></li>
+            </ul>
+          </div>
+          <div class="submenu-column" data-index="5">
+            <h4>학생활동</h4>
+            <ul>
+              <li><a href="#">학생회</a></li>
+              <li><a href="#">동아리정보</a></li>
+              <li><a href="#">학술제작품</a></li>
+              <li><a href="#">교내외수상</a></li>
+            </ul>
+          </div>
+          <div class="submenu-column" data-index="6">
+            <h4>커뮤니티</h4>
+            <ul>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">강의자료실</a></li>
+              <li><a href="#">포토갤러리</a></li>
+              <li><a href="#">홍보동영상</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-visual" id="mainVisual">
+      <div class="main-title-wrap layout">
+        <div class="slidewrap"><strong class="box__title">BEYOND YOURSELF,</strong></div>
+        <div class="slidewrap"><strong class="box__title">ONE STEP AHEAD!</strong></div>
       </div>
     </div>
 
-    <div class="mega-menu">
-      <div class="mega-menu-inner">
-        <div class="submenu-column" data-index="1">
-          <h4>학과안내</h4>
-          <ul>
-            <li><a href="#">학과소개</a></li>
-            <li><a href="#">연혁</a></li>
-            <li><a href="#">취업과진로</a></li>
-            <li><a href="#">특성화전략</a></li>
-            <li><a href="#">학과시설</a></li>
-            <li><a href="#">위치 및 연락처</a></li>
-          </ul>
+    <div class="link_wrap">
+      <div class="quick-nav layout">
+        <div class="quick-item"><span>📍</span><p>위치 및 연락처</p></div>
+        <div class="quick-item"><span>🏢</span><p>학과시설</p></div>
+        <div class="quick-item"><span>📅</span><p>학사일정</p></div>
+        <div class="quick-item"><span>💡</span><p>특성화 전략</p></div>
+        <div class="quick-item"><span>👥</span><p>동아리 정보</p></div>
+        <div class="quick-item"><span>🖼️</span><p>학술제작품</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="news-info-wrapper">
+    <div class="news-section">
+      <h2 class="news-title">NEWS</h2>
+      <div class="news-scroll">
+        <div class="news-item">
+          <div class="news-date">
+            <strong>27</strong>
+            <span>2025-05</span>
+          </div>
+          <div class="news-content">
+            <span class="news-tag">공지사항</span>
+            <strong class="news-headline">[1~4학년 대상] 실전 역량 점검! PCSQL 코딩테스트 안내</strong>
+            <p>컴퓨터공학과 재학생 여러분! 자신의 코딩 실력을 점검하고 성장의 발판을 마련할 수 있는 프로그램에서...</p>
+          </div>
         </div>
-        <div class="submenu-column" data-index="2">
-          <h4>교수소개</h4>
-          <ul>
-            <li><a href="#">컴퓨터공학과</a></li>
-          </ul>
+        <div class="news-item">
+          <div class="news-date">
+            <strong>23</strong>
+            <span>2025-05</span>
+          </div>
+          <div class="news-content">
+            <span class="news-tag">공지사항</span>
+            <strong class="news-headline">[중요] 2025 SW중심대학 디지털 경진대회 참가신청 안내</strong>
+            <p>목원대학교 SW중심대학 사업 책임자 여상수 교수입니다. 6월부터 진행되는 디지털 경진대회에...</p>
+          </div>
         </div>
-        <div class="submenu-column" data-index="3">
-          <h4>학사안내</h4>
-          <ul>
-            <li><a href="#">교과과정</a></li>
-            <li><a href="#">교과목소개</a></li>
-            <li><a href="#">졸업요구조건</a></li>
-            <li><a href="#">학사일정</a></li>
-            <li><a href="#">직무기술서</a></li>
-          </ul>
+        <div class="news-item">
+          <div class="news-date">
+            <strong>20</strong>
+            <span>2025-05</span>
+          </div>
+          <div class="news-content">
+            <span class="news-tag">공지사항</span>
+            <strong class="news-headline">[필독] 2025년 SW아카데미사업 종료! 웹프론트엔드과정 마지막 신청 받습니다</strong>
+            <p>목원대 SW아카데미사업이 올해로 종료됩니다. 마지막 교육생을 모집하오니 많은 관심 바랍니다.</p>
+          </div>
         </div>
-        <div class="submenu-column" data-index="4">
-          <h4>특성화사업</h4>
-          <ul>
-            <li><a href="#">SW인재양성사업</a></li>
-            <li>
-              <a href="#" style="display: inline-block; line-height: 1.5; padding: 6px 12px;">
-                SW전문인재양성사업<br>교육과정
-              </a>
-            </li>
-            <li><a href="#">IPP사업 안내</a></li>
-          </ul>
-        </div>
-        <div class="submenu-column" data-index="5">
-          <h4>학생활동</h4>
-          <ul>
-            <li><a href="#">학생회</a></li>
-            <li><a href="#">동아리정보</a></li>
-            <li><a href="#">학술제작품</a></li>
-            <li><a href="#">교내외수상</a></li>
-          </ul>
-        </div>
-        <div class="submenu-column" data-index="6">
-          <h4>커뮤니티</h4>
-          <ul>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">강의자료실</a></li>
-            <li><a href="#">포토갤러리</a></li>
-            <li><a href="#">홍보동영상</a></li>
-          </ul>
+        <div class="news-item">
+          <div class="news-date">
+            <strong>12</strong>
+            <span>2025-05</span>
+          </div>
+          <div class="news-content">
+            <span class="news-tag">공지사항</span>
+            <strong class="news-headline">** 배리어프리 앱개발 콘테스트 ** 주최: 현대오토에버,서울사회복지공동모금회 / 주관: 사단법인 그린라이트</strong>
+            <p>대학생 공모전 ‘배리어프리 앱개발 콘테스트’는 현대오토에버와 서울사회복지공동모금회가 지원, 사단법인 그린라이트가 주관, 과학기술정보통신부와 교육부 산하 국립특수교육원이 후원하여 사회취약계층의 이동 및 생활 편의를 증진하기 위해 대학생들이 직접 앱을 기획하고 제작할 수 있도록 지원하고 있습니다.</p>
+          </div>
         </div>
       </div>
     </div>
-  </header>
+
+      <div class="info-bg">
+      <div class="info-section">
+        <div class="info-inner">
+          <h2 class="info-title">컴퓨터공학과</h2>
+          <p class="info-desc">
+            우리학과는 4차산업혁명의 핵심기술인 컴퓨팅 기초이론을 비롯하여 IoT, 클라우드, 빅데이터, 인공지능, 정보보호,
+            멀티미디어 그래픽 등과 관련된 이론과 실습을 병행하여 현장적용 가능한 인재를 육성합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top layout">
+      <a href="#">개인정보처리방침</a>
+      <a href="#">이메일무단수집거부</a>
+      <a href="#">대학정보공시</a>
+      <a href="#">오시는길</a>
+    </div>
+    <div class="footer-bottom layout">
+      <p>대전광역시 서구 도안북로 88 ... 목원대학교 공학관 D3층 D323호</p>
+      <p>COPYRIGHT© 2020 MOKWON UNIVERSITY. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
 </body>
-
 </html>
