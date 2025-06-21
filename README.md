@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/p5Ba1kFH)
 # 웹화면구현 파이널 프로젝트
 
-### 컴퓨터공학과 김똘똘
+### 컴퓨터공학과 조수현
 > 디플로이된 웹사이트 주소 : [https://musical-stardust-893131.netlify.app/](https://musical-stardust-893131.netlify.app/)
 
 ### 파이널 프로젝트 요약
@@ -26,6 +26,6 @@
 #### 프로젝트 진행하면서 가장 어려웠던 점
 - 최대한 학교 홈페이지와 똑같이 만들려고했으나 힘들었음
 - 학교 코드의 구조를 봐도 복잡해서 참고하는데 어려움이 들었음
-- 시간이 부족해서 반응형이나 완전 똑같이 못해서 아쉬웠음
+- 시간이 부족해서 반응형이나 최대한 비슷하게 구현 못해서 아쉬웠음
 #### 마지막 멘트
 - 한학기동안 감사했습니다.
