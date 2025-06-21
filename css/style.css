@@ -357,7 +357,10 @@ header.hovering .mega-menu {
 }
 
 .link_wrap li:hover::after {
-  background-color: #2f50d1;
+  background-color: #3048af;
+  background-image: url("/images/background__link.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
   transform: scale(1.08);
 }
 
