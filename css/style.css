@@ -27,7 +27,7 @@ header {
   color: white;
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
 }
 

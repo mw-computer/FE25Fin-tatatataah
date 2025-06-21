@@ -55,37 +55,24 @@ window.addEventListener("DOMContentLoaded", () => {
     header.classList.remove("hovering");
   });
 
-const nav = document.querySelector('.floating-nav');
-let scrollTimer = null;
-let isFollowing = false;
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-let currentTranslateY = 0;
+  let scrollTimer = null;
+  let lastKnownScrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
-  if (scrollTimer !== null) {
-    clearTimeout(scrollTimer);
-  }
+  window.addEventListener("scroll", () => {
+    if (scrollTimer !== null) {
+      clearTimeout(scrollTimer);
+    }
 
-  if (!isFollowing) {
-    nav.style.transition = 'none';
-    nav.style.transform = `translateY(${currentTranslateY}px)`; 
-  }
-
-  scrollTimer = setTimeout(() => {
-    isFollowing = true;
-
-    const targetY = window.scrollY + 200 - 380;
-
-    nav.style.transition = 'transform 0.6s ease';
-    nav.style.transform = `translateY(${targetY}px)`;
-
-    currentTranslateY = targetY;
-
-
-    setTimeout(() => {
-      isFollowing = false;
+    scrollTimer = setTimeout(() => {
+      const scrollY = window.scrollY;
+      const targetTop = 380 + (scrollY - lastKnownScrollY) * 0.2;
+      const clampedTop = Math.min(Math.max(200, targetTop), 600);
+      floatingNav.style.top = `${clampedTop}px`;
+      lastKnownScrollY = scrollY;
     }, 150);
-  }, 150);
-});
-
+  });
 });
