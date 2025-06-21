@@ -111,18 +111,24 @@ header.hovering .header-links span {
 }
 
 .mega-menu {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   background: #f4f4f4;
   z-index: 999;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background: #f8f8f8 url('/images/gnb_bg.jpg') no-repeat right bottom;
 }
 
 header.hovering .mega-menu {
-  display: flex;
-  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .mega-menu-inner {
@@ -137,12 +143,14 @@ header.hovering .mega-menu {
 .submenu-column {
   width: 16.66%;
   min-width: 180px;
-  background: #f4f4f4;
+  background: #f8f8f8;
   padding: 30px 0;
   border-right: 1px solid #ddd;
   border-top: 1px solid #ddd;
   transition: background 0.3s;
+
 }
+
 
 .submenu-column:last-child {
   border-right: none;
@@ -153,15 +161,36 @@ header.hovering .mega-menu {
 }
 
 .submenu-column h4 {
-  border-bottom: 1px solid #999;
-  padding: 0 12px 6px;
-  margin-bottom: 12px;
-  font-size: 16px;
+  font-weight: normal;
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  padding: 0 12px 20px;
   color: black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submenu-column h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .submenu-column.active h4 {
   color: #c8102e;
+}
+
+.submenu-column:hover h4::after {
+  opacity: 0;
 }
 
 .submenu-column ul {
@@ -216,7 +245,7 @@ header.hovering .mega-menu {
 }
 
 .main-title-wrap {
-  padding-bottom: 215px;
+  padding-bottom: 121px;
 }
 
 .layout {
@@ -245,6 +274,7 @@ header.hovering .mega-menu {
     transform: translateY(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0%);
     opacity: 1;
@@ -264,7 +294,7 @@ header.hovering .mega-menu {
   aspect-ratio: 1 / 1;
   position: relative;
   list-style: none;
-  border-right: 1px solid rgba(255,255,255,0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   overflow: visible;
 }
 
@@ -316,12 +346,29 @@ header.hovering .mega-menu {
   z-index: 3;
 }
 
-.icon1 .icon { background-position: 0px 0; }
-.icon2 .icon { background-position: -55px 0; }
-.icon3 .icon { background-position: -110px 0; }
-.icon4 .icon { background-position: -165px 0; }
-.icon5 .icon { background-position: -275px 0; }
-.icon6 .icon { background-position: -440px 0; }
+.icon1 .icon {
+  background-position: 0px 0;
+}
+
+.icon2 .icon {
+  background-position: -55px 0;
+}
+
+.icon3 .icon {
+  background-position: -110px 0;
+}
+
+.icon4 .icon {
+  background-position: -165px 0;
+}
+
+.icon5 .icon {
+  background-position: -275px 0;
+}
+
+.icon6 .icon {
+  background-position: -440px 0;
+}
 
 .news-info-wrapper {
   display: flex;
@@ -336,9 +383,25 @@ header.hovering .mega-menu {
 }
 
 .news-title {
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 900;
   margin-bottom: 20px;
+  font-family: 'exo', sans-serif;
+  font-style: normal;
+}
+
+.news-title::after {
+  display: inline-block;
+  content: '';
+  width: 7px;
+  height: 7px;
+  margin: 3px 0 0 3px;
+  border-radius: 50%;
+  background-color: #2b5ec8;
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: middle;
+  transform: translateY(-15px);
 }
 
 .news-scroll {
@@ -368,26 +431,49 @@ header.hovering .mega-menu {
   display: flex;
   padding: 20px 24px 20px 0;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  padding-left: 100px;
   gap: 16px;
   flex-wrap: nowrap;
 }
 
 .news-date {
-  width: 52px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #cfced3;
   text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .news-date strong {
-  font-size: 20px;
-  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  line-height: 1;
+  font-size: 32px;
+  font-style: normal;
   font-weight: 700;
-  color: #000;
+  color: #3a3840;
 }
+
 .news-date span {
-  font-size: 12px;
-  color: #999;
-  margin-top: 2px;
   display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 45px 0 0;
+  font-size: 14px;
+  font-family: "exo";
+  color: #3a3840;
 }
 
 .news-content {
@@ -417,7 +503,8 @@ header.hovering .mega-menu {
 .news-content p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
   height: 42px;
   font-size: 15px;
@@ -429,42 +516,191 @@ header.hovering .mega-menu {
 
 .info-bg {
   flex: 1;
-  background: #1d1d1d;
+  position: relative;
+  background: url('/images/background__rg.png') center center / cover no-repeat;
+  color: white;
+  z-index: 0;
+}
+
+.info-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  color: #494949;
+  z-index: 1;
 }
 
 .info-section {
+  position: relative;
+  z-index: 2;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 60px 0px 60px 65px;
   color: white;
 }
 
+.info-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.info-section p {
+  margin: 10px 0 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  max-width: 430px;
+  word-break: keep-all;
+  white-space: normal;
+  font-family: 'Noto Sans CJK KR', 'Noto Sans KR';
+}
+
+
+.info-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+}
+
+.info-button {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 55px;
+  line-height: 53px;
+  padding: 0 25px;
+  padding-left: 50px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.info-button::after {
+  content: '>';
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.info-button:hover {
+  border-color: #4361d9;
+  background: #4361d9;
+}
+
+.info-button .icon {
+  display: inline-block;
+  width: 22px;
+  height: 42px;
+  background-image: url('/images/ir-main.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-70%);
+}
+
+.infoicon1 .icon {
+  background-position: -350px 0;
+}
+
+.infoicon2 .icon {
+  background-position: -372px 0;
+}
+
+.infoicon3 .icon {
+  background-position: -395px 0;
+}
+
+.infoicon4 .icon {
+  background-position: -418px 0;
+}
+
+.floating-nav {
+  position: fixed;
+  right: 30px;
+  top: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+  transition: top 0.6s ease;
+}
+
+.nav-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #898d94;
+  background: #fff;
+  font-weight: 700;
+  color: #1d273a;
+  font-size: 15px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+  border: none;
+  cursor: pointer;
+  white-space: pre-line;
+  font-family: 'Noto Sans CJK KR', 'Noto Sans KR';
+}
+
+.top-btn {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #1d273a url("/images/top.png") no-repeat center;
+  font-size: 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+}
+
 footer {
-  background: #111;
+  background: #181c23;
   color: #ccc;
-  padding: 30px 0;
-  font-size: 14px;
+  padding: 48px 0px;
+  font-size: 16px;
 }
 
 .footer-top {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 30px;
   padding-bottom: 15px;
   border-bottom: 1px solid #333;
 }
-
-.footer-top a {
-  color: #ffc107;
+.footer-links a {
+   color: #ffc107;
+  text-decoration: none;
+}
+.footer-other a {
+  color: #FFFFFFB3;
   text-decoration: none;
 }
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 15px;
+  text-align: left;
+  margin-top: 18px;
+  color: #888;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .footer-bottom p {
   margin: 4px 0;
-  color: #888;
+  color: #FFFFFFB3;
+}
+
+.footer-last p{
+  color: #FFFFFF4D;
 }

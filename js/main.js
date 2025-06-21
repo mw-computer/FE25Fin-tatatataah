@@ -3,6 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const mainMenuItems = document.querySelectorAll(".main-menu li");
   const submenuColumns = document.querySelectorAll(".submenu-column");
   const megaMenu = document.querySelector(".mega-menu");
+  const floatingNav = document.getElementById("floatingNav");
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
 
   function clearActive() {
     mainMenuItems.forEach(el => el.classList.remove("active"));
@@ -52,4 +54,38 @@ window.addEventListener("DOMContentLoaded", () => {
     clearActive();
     header.classList.remove("hovering");
   });
+
+const nav = document.querySelector('.floating-nav');
+let scrollTimer = null;
+let isFollowing = false;
+
+let currentTranslateY = 0;
+
+window.addEventListener('scroll', () => {
+  if (scrollTimer !== null) {
+    clearTimeout(scrollTimer);
+  }
+
+  if (!isFollowing) {
+    nav.style.transition = 'none';
+    nav.style.transform = `translateY(${currentTranslateY}px)`; 
+  }
+
+  scrollTimer = setTimeout(() => {
+    isFollowing = true;
+
+    const targetY = window.scrollY + 200 - 380;
+
+    nav.style.transition = 'transform 0.6s ease';
+    nav.style.transform = `translateY(${targetY}px)`;
+
+    currentTranslateY = targetY;
+
+
+    setTimeout(() => {
+      isFollowing = false;
+    }, 150);
+  }, 150);
+});
+
 });
